@@ -11,3 +11,5 @@ selenium==3.141.0
 six==1.15.0
 urllib3==1.25.10
 wcwidth==0.2.5
+
+Faker~=4.1.1
