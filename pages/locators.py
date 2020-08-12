@@ -19,6 +19,12 @@ class ProductPageLocators:
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, '#messages :nth-child(2) .alertinner')
 
 
-class BasePageLocators():
+class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    BASKET_BUTTON = (By.CSS_SELECTOR, ".basket-mini .btn-group a")
+
+
+class BasketPageLocators:
+    BASKET_CONTENT = (By.CSS_SELECTOR, '.basket-items .row :nth-child(3) [name="form-0-quantity"]')
+    BASKET_EMPTY = (By.CSS_SELECTOR, '#content_inner p')

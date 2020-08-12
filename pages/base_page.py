@@ -16,6 +16,10 @@ class BasePage:
     def open(self):
         self.browser.get(self.url)
 
+    def go_to_basket(self):
+        basket = self.browser.find_element(*BasePageLocators.BASKET_BUTTON)
+        basket.click()
+
     def go_to_login_page(self):
         link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         link.click()
@@ -41,7 +45,6 @@ class BasePage:
             WebDriverWait(self.browser, timeout).until(EC.presence_of_element_located((how, what)))
         except TimeoutException:
             return True
-
         return False
 
     def should_be_login_link(self):
